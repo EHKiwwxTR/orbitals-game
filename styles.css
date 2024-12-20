@@ -1,0 +1,62 @@
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: #f0f8ff;  
+    color: #333;  
+    text-align: center;  
+}  
+
+.container {  
+    max-width: 600px;  
+    margin: auto;  
+    padding: 20px;  
+    background: white;  
+    border-radius: 8px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    display: inline-block;  
+}  
+
+button {  
+    padding: 10px 15px;  
+    font-size: 16px;  
+    cursor: pointer;  
+    border: none;  
+    background-color: #007bff;  
+    color: white;  
+    border-radius: 5px;  
+}  
+
+button:hover {  
+    background-color: #0056b3;  
+}  
+
+.card {  
+    display: inline-block;  
+    margin: 10px;  
+    padding: 20px;  
+    background-color: #007bff;  
+    color: white;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    transition: transform 0.2s, opacity 0.2s;  
+}  
+
+.card:hover {  
+    transform: scale(1.05);  
+}  
+
+.card.correct {  
+    background-color: #28a745;  
+    opacity: 1;  
+}  
+
+.card.incorrect {  
+    background-color: #dc3545;  
+}  
+
+.card.paired {  
+    opacity: 0.5;  
+}  
+
+.hidden {  
+    display: none;  
+}

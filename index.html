@@ -1,0 +1,52 @@
+<!DOCTYPE html>  
+<html lang="tr">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Orbitaller Eşleştirme Oyunu</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div class="container" id="start-screen">  
+        <h1>Orbitaller Eşleştirme Oyunu</h1>  
+        <p>Oyununa başlamak için zorluk seviyesini seçin:</p>  
+        <select id="difficulty-select">  
+            <option value="easy">Kolay</option>  
+            <option value="medium">Orta</option>  
+            <option value="hard">Zor</option>  
+        </select>  
+        <button onclick="startGame()">Oyuna Başla</button>  
+        <div>  
+            <h3>Eşleşmeler:</h3>  
+            <ul>  
+                <li><span style="color:red;">🔴</span> 2s</li>  
+                <li><span style="color:yellow;">🟡</span> 1s</li>  
+                <li><span style="color:green;">🟢</span> 2p</li>  
+                <li><span style="color:brown;">🟤</span> 3s</li>  
+                <li><span style="color:blue;">🔵</span> 4p</li>  
+                <li><span style="color:orange;">🟠</span> 4s</li>  
+                <li><span style="color:purple;">🟣</span> 5s</li>  
+            </ul>  
+        </div>  
+    </div>  
+
+    <div class="container" id="game-screen" style="display: none;">  
+        <h2>Orbital Eşleştirme</h2>  
+        <p>Skor: <span id="score">0</span> | Süre: <span id="time">30</span> saniye</p>  
+        <div id="game-area"></div>  
+        <button onclick="resetGame()">Oyun Tamamla</button>  
+    </div>  
+
+    <div class="container" id="end-screen" style="display: none;">  
+        <h2>Oyun Bitti!</h2>  
+        <p>Skorunuz: <span id="final-score"></span></p>  
+        <p>En Yüksek Skor: <span id="high-score"></span></p>  
+        <button onclick="startGame()">Yeniden Oyna</button>  
+    </div>  
+
+    <script src="script.js"></script>  
+    <audio id="correct-sound" src="correct.mp3"></audio>  
+    <audio id="incorrect-sound" src="incorrect.mp3"></audio>  
+    <audio id="background-music" src="background.mp3" loop></audio>  
+</body>  
+</html>
